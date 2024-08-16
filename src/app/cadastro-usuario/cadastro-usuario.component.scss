@@ -1,0 +1,36 @@
+.card-title2 {
+  font-style: bold;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #4E4E4E 34%, #00A3FF 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-family: "Stick No Bills", sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #0b5cff;
+  color: #ffffff;
+  border: #002060;
+}
+
+.cor-botoes {
+  background-color: #002060;
+  border: none;
+}
+
+.btn-primary {
+  font-family: "Stick No Bills", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+
+  width: 150px;
+
+}
