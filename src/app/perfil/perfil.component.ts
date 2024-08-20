@@ -10,5 +10,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrl: './perfil.component.scss'
 })
 export class PerfilComponent {
-
+  cadastrarPaciente() {
+    // Lógica para cadastrar paciente
+    console.log('Paciente cadastrado!');
+  }
 }

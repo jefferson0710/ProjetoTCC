@@ -1,0 +1,87 @@
+:host {
+  display: block;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  margin-top: 50px;
+  background-color: #002060;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  /* Permite que os elementos se ajustem em telas menores */
+}
+
+.card-content {
+  max-width: 70%;
+  flex: 1 1 100%;
+  /* Permite que o conteúdo ocupe 100% da largura em telas pequenas */
+  text-align: center;
+  /* Centraliza o texto em telas pequenas */
+}
+
+.card-content h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-content p {
+  margin: 10px 0 20px;
+  font-size: 16px;
+}
+
+.card-content button {
+  background-color: #0b5cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    /* Empilha conteúdo e imagem verticalmente em telas pequenas */
+    padding: 15px;
+  }
+
+  .card-content {
+    max-width: 100%;
+  }
+
+  .card-content h2 {
+    font-size: 20px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+  }
+
+  .card-content button {
+    width: 100%;
+    /* Botão ocupa 100% da largura em telas pequenas */
+    padding: 10px;
+  }
+
+  .card-image {
+    margin-top: 15px;
+  }
+}

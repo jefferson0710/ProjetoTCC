@@ -1,9 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.logo-name{
+
+.logo-name {
   font-weight: 500;
   background: linear-gradient(to right, #4E4E4E 34%, #00A3FF 100%);
   -webkit-background-clip: text;
@@ -17,6 +18,7 @@
   font-size: 22px;
   font-family: "Stick No Bills", sans-serif;
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -26,26 +28,28 @@ nav {
   display: flex;
   align-items: center;
   background-color: #fff;
-  box-shadow: 0 0 1px rgba(0,0,0, 0.1);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
-body{
+
+body {
   min-height: 100%;
   background: #e3f2fd;
 }
-nav .logo{
+
+nav .logo {
   display: flex;
   align-items: center;
   margin: 0 24px;
 }
 
-.logo .menu-icon{
+.logo .menu-icon {
   color: #333;
   font-size: 24px;
   margin-right: 14px;
   cursor: pointer;
 }
 
-nav .sidebar{
+nav .sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -53,26 +57,27 @@ nav .sidebar{
   width: 260px;
   padding: 20px 0;
   background-color: #fff;
-  box-shadow: 0 5px 1px rgba(0,0,0, 0.1);
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
 }
 
-nav.open .sidebar{
+nav.open .sidebar {
   left: 0;
 }
 
-.sidebar .sidebar-content{
+.sidebar .sidebar-content {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
   padding: 30px 16px;
 }
-.sidebar-content .list{
+
+.sidebar-content .list {
   list-style: none;
 }
 
-.list .nav-link{
+.list .nav-link {
   display: flex;
   align-items: center;
   padding: 14px 12px;
@@ -80,25 +85,25 @@ nav.open .sidebar{
   text-decoration: none;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   background-color: #00A3FF;
 
 }
 
-.nav-link .icon{
+.nav-link .icon {
   margin-right: 14px;
   font-size: 20px;
   color: black;
 }
 
-.nav-link .link{
+.nav-link .link {
   font-size: 16px;
   color: black;
   font-weight: 400;
 }
 
 .nav-link:hover .icon,
-.nav-link:hover .link{
+.nav-link:hover .link {
   color: #fff;
 }
 
