@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00A3FF;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.content {
+  color: white;
+  max-width: 60%;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #00184d;
+  color: white;
+}
+
+.illustration {
+  max-width: 20%;
+  border-radius: 10px;
+}
+
+.illustration img {
+  width: 100%;
+  border-radius: 10px;
+}
+.anamnese-container {
+  margin-top: 50px;
+  text-align: center;
+  padding: 50px 20px;
+
+}
+
+.anamnese-container h1 {
+  font-size: 36px;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.anamnese-container .highlight {
+  color: #009688;
+  text-decoration: underline;
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  padding: 0 5px;
+}
+
+.anamnese-container .description {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  width: 200px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.feature i {
+  font-size: 40px;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Ícones personalizados (Substitua pelos seus ou use FontAwesome) */
+.icon-check::before {
+  content: "✔";
+}
+
+.icon-paperclip::before {
+  content: "📎";
+}
+
+.icon-clock::before {
+  content: "⏰";
+}
+
+.icon-error::before {
+  content: "❌";
+}
