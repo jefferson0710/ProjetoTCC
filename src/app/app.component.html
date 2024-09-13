@@ -1,1 +1,5 @@
-<router-outlet></router-outlet>
+<div class="body body-trimmed">
+  <router-outlet />
+</div><app-footer></app-footer>
+<app-navbar [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
+  (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)" />

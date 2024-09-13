@@ -1,51 +1,26 @@
-<nav class="container">
-  <div class="sidebar">
-    <div class="logo">
-      <i class="bx bx-menu menu-icon" (click)="onSave()"></i>
-      <span class="logo-name">ANAMNESE</span>
-    </div>
-
-    <div class="sidebar-content" [ngClass]="{ 'link': isSidebar, 'hiddenD': !isSidebar }">
-      <ul class="lists">
-        <li class="list">
-          <a [routerLink]="['']" class="nav-link">
-            <i class="bx bx-home-alt icon"></i>
-            <span [ngClass]="{ 'link': isSidebar, 'hiddenD': !isSidebar }">Início</span>
-          </a>
-        </li>
-        <li class="list">
-          <a [routerLink]="['/perfil']" class="nav-link">
-            <i class="bx bx-clipboard icon"></i>
-            <span [ngClass]="{ 'link': isSidebar, 'hiddenD': !isSidebar }">Ficha de Anamnese</span>
-          </a>
-        </li>
-        <li class="list">
-          <a [routerLink]="['/pacientes']" class="nav-link">
-            <i class="bx bx-user icon"></i>
-            <span [ngClass]="{ 'link': isSidebar, 'hiddenD': !isSidebar }">Pacientes</span>
-          </a>
-        </li>
-        <li class="list">
-          <a [routerLink]="['/colaboradores']" class="nav-link">
-            <i class="bx bx-group icon"></i>
-            <span [ngClass]="{ 'link': isSidebar, 'hiddenD': !isSidebar }">Colaboradores</span>
-          </a>
-        </li>
-      </ul>
-      <div class="bottom-content">
-        <li class="list">
-          <a [routerLink]="['/configuracao']" class="nav-link">
-            <i class="bx bx-cog icon"></i>
-            <span [ngClass]="{ 'link': isSidebar, 'hiddenD': !isSidebar }">Configuração</span>
-          </a>
-        </li>
-        <li class="list">
-          <a [routerLink]="['/sair']" class="nav-link">
-            <i class="bx bx-log-out icon"></i>
-            <span [ngClass]="{ 'link': isSidebar, 'hiddenD': !isSidebar }">Sair</span>
-          </a>
-        </li>
-      </div>
-    </div>
+<div class="sidenav" [ngClass]="isLeftSidebarCollapsed() ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">
+      <i class="fal fa-bars"></i>
+    </button>
+    @if (!isLeftSidebarCollapsed()) {
+    <div class="logo-text">ANAMNESE</div>
+    <button class="btn-close" (click)="closeSidenav()" style="background-color: black;">
+      <i class="fal fa-times close-icon"></i>
+    </button>
+    }
   </div>
-</nav>
+  <div class="sidenav-nav">
+    @for (item of items; track $index) {
+    <li class="sidenav-nav-item">
+      <a class="sidenav-nav-link" [routerLink]="item.routeLink" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <i class="sidenav-link-icon" [class]="item.icon"></i>
+        @if (!isLeftSidebarCollapsed()) {
+        <span class="sidenav-link-text">{{ item.label }}</span>
+        }
+      </a>
+    </li>
+    }
+  </div>
+</div>

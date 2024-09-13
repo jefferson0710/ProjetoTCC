@@ -1,127 +1,130 @@
-<app-navbar></app-navbar>
 <div class="container">
   <div class="form-container">
-      <h3 class="header">AVALIAÇÃO FISIOTERÁPICA</h3>
+    <h3 class="header">AVALIAÇÃO FISIOTERÁPICA</h3>
 
-      <div class="header">
-          <div class="row">
-              <div class="col-md-6">Fisioterapeuta:</div>
-              <div class="col-md-6 text-right">Data da Avaliação:</div>
-          </div>
+    <div class="header">
+      <div class="row">
+        <div class="col-md-6">Fisioterapeuta:</div>
+        <div class="col-md-6 text-right">Data da Avaliação:</div>
       </div>
+    </div>
 
-      <div class="sub-header">IDENTIFICAÇÃO</div>
-      <div class="form-group row">
-          <div class="col-md-6">
-              <label for="nome">Nome</label>
-              <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
-          </div>
-          <div class="col-md-3">
-              <label for="idade">Idade</label>
-              <input type="number" class="form-control" id="idade" placeholder="Idade">
-          </div>
-          <div class="col-md-3">
-              <label for="cns">CNS</label>
-              <input type="text" class="form-control" id="cns" placeholder="CNS">
-          </div>
+    <div class="sub-header">IDENTIFICAÇÃO</div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
       </div>
-      <div class="form-group row">
-          <div class="col-md-6">
-              <label for="endereco">Endereço</label>
-              <input type="text" class="form-control" id="endereco" placeholder="Endereço">
-          </div>
-          <div class="col-md-3">
-              <label for="sexo">Sexo</label>
-              <div>
-                  <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
-                  <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
-              </div>
-          </div>
-          <div class="col-md-3">
-              <label for="fone">Fone</label>
-              <input type="text" class="form-control" id="fone" placeholder="Telefone">
-          </div>
+      <div class="col-md-3">
+        <label for="idade">Idade</label>
+        <input type="number" class="form-control" id="idade" placeholder="Idade">
       </div>
-      <div class="form-group row">
-          <div class="col-md-6">
-              <label for="profissao">Profissão</label>
-              <input type="text" class="form-control" id="profissao" placeholder="Profissão">
-          </div>
+      <div class="col-md-3">
+        <label for="cns">CNS</label>
+        <input type="text" class="form-control" id="cns" placeholder="CNS">
       </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="endereco">Endereço</label>
+        <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+      </div>
+      <div class="col-md-3">
+        <label for="sexo">Sexo</label>
+        <div>
+          <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+          <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="fone">Telefone</label>
+        <input type="text" class="form-control" id="fone" placeholder="Telefone">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="profissao">Profissão</label>
+        <input type="text" class="form-control" id="profissao" placeholder="Profissão">
+      </div>
+    </div>
 
-      <div class="sub-header">ANAMNESE</div>
-      <div class="form-group row">
-          <div class="col-md-6">
-              <label for="diagnostico">Diagnóstico Clínico</label>
-              <input type="text" class="form-control" id="diagnostico" placeholder="Diagnóstico Clínico">
-          </div>
-          <div class="col-md-6">
-              <label for="cid">CID</label>
-              <input type="text" class="form-control" id="cid" placeholder="CID">
-          </div>
+    <div class="sub-header">ANAMNESE</div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="diagnostico">Diagnóstico Clínico</label>
+        <input type="text" class="form-control" id="diagnostico" placeholder="Diagnóstico Clínico">
       </div>
-      <div class="form-group">
-          <label for="queixa">Queixa Principal</label>
-          <textarea class="form-control" id="queixa" rows="3" placeholder="Descreva a queixa principal"></textarea>
+      <div class="col-md-6">
+        <label for="cid">CID</label>
+        <input type="text" class="form-control" id="cid" placeholder="CID">
       </div>
-      <div class="form-group">
-          <label for="hma">HMA / HPP / HF</label>
-          <textarea class="form-control" id="hma" rows="3" placeholder="História da Moléstia Atual / Histórico Pessoal Patológico / Histórico Familiar"></textarea>
-      </div>
+    </div>
+    <div class="form-group">
+      <label for="queixa">Queixa Principal</label>
+      <textarea class="form-control" id="queixa" rows="3" placeholder="Descreva a queixa principal"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="hma">HMA / HPP / HF</label>
+      <textarea class="form-control" id="hma" rows="3"
+        placeholder="História da Moléstia Atual / Histórico Pessoal Patológico / Histórico Familiar"></textarea>
+    </div>
 
-      <div class="form-group row">
-          <div class="col-md-3">
-              <label>Pratica alguma atividade física?</label>
-              <div>
-                  <label><input type="radio" name="atividade_fisica" value="nao"> NÃO</label>
-                  <label><input type="radio" name="atividade_fisica" value="sim"> SIM</label>
-              </div>
-          </div>
-          <div class="col-md-3">
-              <label>Fuma?</label>
-              <div>
-                  <label><input type="radio" name="fuma" value="nao"> NÃO</label>
-                  <label><input type="radio" name="fuma" value="sim"> SIM</label>
-              </div>
-              <input type="text" class="form-control mt-1" id="cigarros_dia" placeholder="cigarros/dia">
-          </div>
-          <div class="col-md-3">
-              <label>Bebidas Alcoólicas?</label>
-              <div>
-                  <label><input type="radio" name="bebidas" value="nao"> NÃO</label>
-                  <label><input type="radio" name="bebidas" value="sim"> SIM</label>
-              </div>
-              <input type="text" class="form-control mt-1" id="vezes_semana" placeholder="vezes por semana">
-          </div>
-          <div class="col-md-3">
-              <label>Impede tarefa ou movimento?</label>
-              <div>
-                  <label><input type="radio" name="impede_tarefa" value="nao"> NÃO</label>
-                  <label><input type="radio" name="impede_tarefa" value="sim"> SIM</label>
-              </div>
-          </div>
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label>Pratica alguma atividade física?</label>
+        <div>
+          <label><input type="radio" name="atividade_fisica" value="nao"> NÃO</label>
+          <label><input type="radio" name="atividade_fisica" value="sim"> SIM</label>
+        </div>
       </div>
-
-      <div class="form-group row">
-          <div class="col-md-3">
-              <label for="pa">PA</label>
-              <input type="text" class="form-control" id="pa" placeholder="PA (X mmHg)">
-          </div>
-          <div class="col-md-3">
-              <label for="peso">Peso</label>
-              <input type="text" class="form-control" id="peso" placeholder="Peso">
-          </div>
-          <div class="col-md-3">
-              <label for="altura">Altura</label>
-              <input type="text" class="form-control" id="altura" placeholder="Altura">
-          </div>
-          <div class="col-md-3">
-              <label for="eav">EAV</label>
-              <input type="text" class="form-control" id="eav" placeholder="EAV">
-          </div>
+      <div class="col-md-3">
+        <label>Fuma?</label>
+        <div>
+          <label><input type="radio" name="fuma" value="nao"> NÃO</label>
+          <label><input type="radio" name="fuma" value="sim"> SIM</label>
+        </div>
+        <input type="text" class="form-control mt-1" id="cigarros_dia" placeholder="cigarros/dia">
       </div>
+      <div class="col-md-3">
+        <label>Bebidas Alcoólicas?</label>
+        <div>
+          <label><input type="radio" name="bebidas" value="nao"> NÃO</label>
+          <label><input type="radio" name="bebidas" value="sim"> SIM</label>
+        </div>
+        <input type="text" class="form-control mt-1" id="vezes_semana" placeholder="vezes por semana">
+      </div>
+      <div class="col-md-3">
+        <label>Impede tarefa ou movimento?</label>
+        <div>
+          <label><input type="radio" name="impede_tarefa" value="nao"> NÃO</label>
+          <label><input type="radio" name="impede_tarefa" value="sim"> SIM</label>
+        </div>
+      </div>
+    </div>
 
-      <div class="sub-header">DADOS COMPLEMENTARES</div>
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="pa">PA</label>
+        <input type="text" class="form-control" id="pa" placeholder="PA (X mmHg)">
+      </div>
+      <div class="col-md-3">
+        <label for="peso">Peso</label>
+        <input type="text" class="form-control" id="peso" placeholder="Peso">
+      </div>
+      <div class="col-md-3">
+        <label for="altura">Altura</label>
+        <input type="text" class="form-control" id="altura" placeholder="Altura">
+      </div>
+      <div class="col-md-3">
+        <label for="eav">EAV</label>
+        <input type="text" class="form-control" id="eav" placeholder="EAV">
+      </div>
+    </div>
+
+    <div class="sub-header">DADOS COMPLEMENTARES</div>
+    <div class="form-group">
+      <textarea class="form-control" id="dados_complementares" rows="3"
+        placeholder="Descreva informações complementares"></textarea>
+    </div>
   </div>
 </div>
-

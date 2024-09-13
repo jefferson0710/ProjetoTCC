@@ -4,7 +4,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [CommonModule,  NavbarComponent],
+  imports: [CommonModule, NavbarComponent],
   templateUrl: './perfil.component.html',
   styleUrl: './perfil.component.scss'
 })

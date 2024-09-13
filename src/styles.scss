@@ -45,17 +45,10 @@
 
 }
 
-.color-input {
-  border-color: #002060;
-}
-
 .btn-primary {
   font-family: "Stick No Bills", sans-serif;
   font-size: 24px;
   font-weight: bold;
-
-  width: 150px;
-
 }
 
 .btn-outline-primary {
@@ -63,18 +56,18 @@
   font-weight: bold;
   border-width: 2px;
   font-size: 24px;
-
+  text-align: center;
   font-family: "Stick No Bills", sans-serif;
   background-color: #ffffff;
   color: 012760hsl(220, 100%, 19%);
   color: #002060;
-  width: 150px;
 }
 
 .btn-outline-primary:hover {
   background-color: #002060;
   color: #ffffff;
   border: #002060;
+
 }
 
 .text-decoration-none {
@@ -111,4 +104,25 @@
   text-transform: uppercase;
   font-style: bold;
   font-size: 15px;
+}
+
+.body {
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  transition: all 0.5s ease;
+  background: #f4f7fa;
+  padding: 3rem;
+}
+
+.body-trimmed {
+  width: calc(100% - 16.5625rem);
+  margin-left: 16.5625rem;
+}
+
+.body-md-screen {
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
 }

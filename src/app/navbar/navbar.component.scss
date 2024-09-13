@@ -1,122 +1,125 @@
-*{
+.sidenav {
+  background: white;
+  transition: all 0.5s ease;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 16.5625rem;
+  height: 100vh;
+  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+}
+
+.sidenav-collapsed {
+  width: 5rem;
+}
+
+.sidenav .logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0.938rem 0.938rem 0 0.938rem;
+  width: 100%;
+}
+
+.sidenav .logo-container .logo {
+  background: #ffffff;
+  text-align: center;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 0.313rem;
+  padding: 0.313rem;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+}
+
+.sidenav .logo-container .logo-text {
+  margin-left: 1.5rem;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
+
+.sidenav .logo-container .btn-close {
+  margin-left: auto;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.sidenav .logo-container .btn-close .fa-times {
+  color: #fff;
+  font-size: 24px;
+}
+
+.sidenav-nav {
+  list-style: none;
+  padding: 0.938rem;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 3.65rem);
+  cursor: pointer;
+}
 
-  .logo-name {
-    font-weight: 500;
-    background: linear-gradient(to right, #4E4E4E 34%, #00A3FF 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -ms-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -ms-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    font-size: 48px;
-    font-family: "Stick No Bills", sans-serif;
-  }
+.sidenav-nav .sidenav-nav-item {
+  width: 100%;
+  margin-bottom: 0.625rem;
+}
 
-  nav {
-    position: flex;
-    top: 0;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+.sidenav-nav .sidenav-nav-item .sidenav-nav-link {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: black;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
+}
 
-  }
+.sidenav-nav .sidenav-nav-item .sidenav-nav-link .sidenav-link-icon {
+  font-size: 22px;
+  width: 2rem;
+  min-width: 2rem;
+  text-align: center;
+  padding: 12px;
+}
 
-  .hiddenD {
-    display: none;
-  }
+.sidenav-nav .sidenav-nav-item .sidenav-nav-link .sidenav-link-text {
+  margin-left: 1.5rem;
+}
 
+.sidenav-nav .sidenav-nav-item:hover .sidenav-nav-link {
+  background-color: #00A3FF;
+  color: white;
+}
 
-  body {
-    min-height: 100%;
-    background: #e3f2fd;
+.active {
+  background-color: white;
+}
 
-  }
+.active .sidenav-link-icon,
+.active .sidenav-link-text {
+  color: #000;
+}
 
+.logo-text {
 
+  font-weight: 500;
+  background: linear-gradient(to right, #4E4E4E 34%, #00A3FF 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-family: "Stick No Bills", sans-serif;
 
-  nav .logo {
-    display: flex;
-    align-items: center;
-    margin: 0 24px;
-    font-size: 22px;
-  }
-
-  .logo .menu-icon {
-    color: #333;
-    font-size: 40px;
-    margin-right: 14px;
-    cursor: pointer;
-  }
-
-  nav .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 260px;
-    padding: 20px 0;
-    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
-  }
-
-  nav.open .sidebar {
-    left: 0;
-
-
-  }
-
-  .sidebar .sidebar-content {
-    display: flex;
-    height:99%;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px 16px;
-  }
-
-  .sidebar-content .list {
-    list-style: none;
-  }
-
-  .list .nav-link {
-    display: flex;
-    align-items: center;
-    padding: 14px 12px;
-    border-radius: 8px;
-    text-decoration: none;
-  }
-
-  .nav-link:hover {
-    background-color: #00A3FF;
-
-
-  }
-
-  .nav-link .icon {
-    margin-right: 14px;
-    font-size: 35px;
-    color: black;
-  }
-
-  .nav-link .link {
-    font-size: 16px;
-    color: black;
-    font-weight: 400;
-    transition: all 0.5s ease;
-  }
-
-  .nav-link:hover .icon,
-  .nav-link:hover .link {
-    color: #fff;
-    display: fixed;
-  }
-
+}
