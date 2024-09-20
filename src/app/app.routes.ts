@@ -8,6 +8,6 @@ export const routes: Routes = [
   { path: '', component: PaginaPrincipalComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'cadastro_usuario', component: CadastroUsuarioComponent },
+  { path: 'cadastro-usuario', component: CadastroUsuarioComponent },
   { path: 'pacientes', component: PacientesComponent }
 ];

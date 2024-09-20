@@ -1,3 +1,4 @@
+
 .sidenav {
   background: white;
   transition: all 0.5s ease;
@@ -18,6 +19,7 @@
   align-items: center;
   padding: 0.938rem 0.938rem 0 0.938rem;
   width: 100%;
+
 }
 
 .sidenav .logo-container .logo {
@@ -34,10 +36,10 @@
 }
 
 .sidenav .logo-container .logo-text {
-  margin-left: 1.5rem;
   font-size: 24px;
   font-weight: 700;
   color: black;
+  margin-left: auto;
 }
 
 .sidenav .logo-container .btn-close {
@@ -69,6 +71,8 @@
 .sidenav-nav .sidenav-nav-item {
   width: 100%;
   margin-bottom: 0.625rem;
+  opacity: 1;
+  transition: opacity 0.3s ease 0.5s;
 }
 
 .sidenav-nav .sidenav-nav-item .sidenav-nav-link {
