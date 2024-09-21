@@ -26,8 +26,6 @@ export class AppComponent {
   }
 
   showNavbar(): boolean {
-    console.log(this.router.url)
-    // Verifica se a rota atual é a página de login
     return this.router.url !== '/' && this.router.url !== '/cadastro-usuario';
   }
 }
