@@ -18,7 +18,7 @@ export class NavbarComponent {
   changeIsLeftSidebarCollapsed = output<boolean>();
   items = [
     {
-      routeLink: '',
+      routeLink: 'pagina',
       icon: 'fal fa-home',
       label: 'Início',
     },
@@ -43,7 +43,7 @@ export class NavbarComponent {
       label: 'Configuração',
     },
     {
-      routeLink: 'settings',
+      routeLink: '',
       icon: 'fal fa-door-open',
       label: 'Sair',
     },
