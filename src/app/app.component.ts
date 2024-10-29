@@ -7,6 +7,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { FooterComponent } from "./footer/footer.component";
 import { CommonModule } from '@angular/common';
+import { PacientesComponent } from "./pacientes/pacientes.component";
+
 
 
 @Component({
@@ -14,7 +16,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [CommonModule, RouterOutlet, LoginComponent, PerfilComponent, CadastroUsuarioComponent, NavbarComponent, PaginaPrincipalComponent, FooterComponent]
+  imports: [CommonModule, RouterOutlet, LoginComponent, PerfilComponent, CadastroUsuarioComponent, NavbarComponent, PaginaPrincipalComponent, FooterComponent, PacientesComponent]
 })
 export class AppComponent {
   title = 'ProjetoTCC';

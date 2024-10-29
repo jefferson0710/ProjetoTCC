@@ -1,57 +1,47 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { CommonEngine } from '@angular/ssr';
-import express from 'express';
-import { fileURLToPath } from 'node:url';
-import { dirname, join, resolve } from 'node:path';
-import bootstrap from './src/main.server';
+import express, { Request, Response } from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import { createClient } from '@supabase/supabase-js';
 
-// The Express app is exported so that it can be used by serverless Functions.
-export function app(): express.Express {
-  const server = express();
-  const serverDistFolder = dirname(fileURLToPath(import.meta.url));
-  const browserDistFolder = resolve(serverDistFolder, '../browser');
-  const indexHtml = join(serverDistFolder, 'index.server.html');
+// Configurações do Supabase
+const supabaseUrl: string = 'https://cyyftngwapviavqonglg.supabase.co'; // Substitua com sua URL do Supabase
+const supabaseKey: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5eWZ0bmd3YXB2aWF2cW9uZ2xnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA1MDY0OTIsImV4cCI6MjAzNjA4MjQ5Mn0.vJRgTkqkT6APcaoF7o_3Z0Um2djLz47cc2nIUDUqrVM'; // Substitua com sua chave pública do Supabase
+const supabase = createClient(supabaseUrl, supabaseKey);
 
-  const commonEngine = new CommonEngine();
+// Inicializando o app Express
+const app = express();
 
-  server.set('view engine', 'html');
-  server.set('views', browserDistFolder);
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
-  server.get('**', express.static(browserDistFolder, {
-    maxAge: '1y',
-    index: 'index.html',
-  }));
+// Rota para salvar dados de anamnese
+app.post('/api/Usuários', async (req: Request, res: Response) => {
+  const {
+    nomeCompleto, idade, dataNascimento, telefone,
+    email, crefito, cidade, estadoCivil, cpf
+  } = req.body;
 
-  // All regular routes use the Angular engine
-  server.get('**', (req, res, next) => {
-    const { protocol, originalUrl, baseUrl, headers } = req;
+  try {
+    const { data, error } = await supabase
+      .from('usuários')  // Substitua pelo nome da sua tabela no Supabase
+      .insert([{
+        nomeCompleto,
+        idade,
+        dataNascimento,
+        telefone,
+        email,
+        crefito,
+        cidade,
+        estadoCivil,
+        cpf
+      }]);
 
-    commonEngine
-      .render({
-        bootstrap,
-        documentFilePath: indexHtml,
-        url: `${protocol}://${headers.host}${originalUrl}`,
-        publicPath: browserDistFolder,
-        providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
-      })
-      .then((html) => res.send(html))
-      .catch((err) => next(err));
-  });
+    if (error) throw error;
 
-  return server;
-}
+    res.status(201).json({ message: 'Dados de anamnese salvos com sucesso!' });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao salvar os dados.' });
+  }
+});
 
-function run(): void {
-  const port = process.env['PORT'] || 4000;
-
-  // Start up the Node server
-  const server = app();
-  server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
-  });
-}
-
-run();

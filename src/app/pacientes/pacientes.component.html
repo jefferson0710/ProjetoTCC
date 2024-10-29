@@ -6,14 +6,23 @@
           Busca por Paciente
         </div>
         <div class="card-body">
-          <form>
+          <form (ngSubmit)="buscarPaciente()"> <!-- Use ngSubmit se desejar submeter o formulário -->
             <div class="mb-3">
               <label for="cpf" class="form-label">CPF:</label>
-              <input type="text" class="form-control" id="cpf" placeholder="Digite o CPF">
+              <input type="text" class="form-control" id="cpf" [(ngModel)]="cpf" name="cpf" placeholder="Digite o CPF"
+                required>
             </div>
-            <button type="button" class="btn btn-primary">Buscar</button>
+            <button type="button" class="btn btn-primary" (click)="buscarPaciente()">Buscar</button>
+            <!-- Chamando buscarPaciente() ao clicar -->
           </form>
-          <div id="resultado" class="mt-3">
+          <div id="resultado" class="mt-3" *ngIf="resultado"> <!-- Exibe o resultado se disponível -->
+            <div *ngIf="resultado.error">{{ resultado.error }}</div>
+            <div *ngIf="!resultado.error">
+              <h5>Resultado:</h5>
+              <p><strong>Nome:</strong> {{ resultado.name }}</p>
+              <p><strong>Idade:</strong> {{ resultado.idade }}</p>
+              <!-- Adicione outros campos conforme necessário -->
+            </div>
           </div>
         </div>
       </div>
