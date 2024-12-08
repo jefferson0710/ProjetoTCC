@@ -6,7 +6,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root',
 })
 export class FichaService {
-  private apiUrl = ' http://127.0.0.1:3333/fichas' // URL da sua API AdonisJS
+  private apiUrl = ' http://127.0.0.1:3333/fichas'; // URL da sua API AdonisJS
 
   constructor(private http: HttpClient) { }
 

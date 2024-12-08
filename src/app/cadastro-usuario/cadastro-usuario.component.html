@@ -10,53 +10,52 @@
   </div>
 
   <!-- Formulário com largura ajustada -->
-  <form class="w-75 mt-4" action="">
+  <form class="w-75 mt-4">
     <div class="form-group">
-      <label for="nomeCompleto">Nome Completo *</label>
-      <input type="text" id="nomeCompleto" class="form-control" style="border-color: #002060;" placeholder="" required>
+      <label for="name">Nome Completo *</label>
+      <input type="text" id="username" class="form-control" style="border-color: #002060;"
+        [(ngModel)]="formData.username" required name="username" />
+    </div>
+    <div class="form-group">
+      <label for="name">Usuário*</label>
+      <input type="text" id="name" class="form-control" style="border-color: #002060;" [(ngModel)]="formData.name"
+        required name="name" />
     </div>
     <div class="form-group mt-3">
-      <label for="nomeCompleto">Senha*</label>
-      <input type="text" id="idade" class="form-control" style="border-color: #002060;" placeholder="" required>
+      <label for="password">Senha *</label>
+      <input type="password" id="password" class="form-control" style="border-color: #002060;"
+        [(ngModel)]="formData.password" required name="password" />
     </div>
     <div class="form-group mt-3">
-      <label for="idade">Idade</label>
-      <input type="number" id="idade" class="form-control" style="border-color: #002060;" placeholder="" required>
+      <label for="idade">Idade *</label>
+      <input type="text" id="idade" class="form-control" style="border-color: #002060;" [(ngModel)]="formData.idade"
+        required name="idade" />
     </div>
     <div class="form-group mt-3">
-      <label for="dataNascimento">Data de Nascimento *</label>
-      <input type="text" id="dataNascimento" class="form-control" placeholder="DD/MM/AAAA"
-        style="border-color: #002060;" required>
-    </div>
-    <div class="form-group mt-3">
-      <label for="telefone">Telefone com DDD *</label>
-      <input type="text" id="telefone" class="form-control" placeholder="(00) 0000-0000" style="border-color: #002060;"
-        required>
+      <label for="nascimento">Data de Nascimento *</label>
+      <input type="date" id="nascimento" class="form-control" placeholder="DD/MM/AAAA" style="border-color: #002060;"
+        [(ngModel)]="formData.nascimento" required name="nascimento" />
     </div>
     <div class="form-group mt-3">
       <label for="email">Email *</label>
-      <input type="email" id="email" class="form-control" placeholder="" style="border-color: #002060;" required>
+      <input type="text" id="email" class="form-control" style="border-color: #002060;" [(ngModel)]="formData.email"
+        required name="email" />
     </div>
     <div class="form-group mt-3">
-      <label for="crefito">Número da CREFITO</label>
-      <input type="text" id="crefito" class="form-control" style="border-color: #002060;" placeholder="" required>
-    </div>
-    <div class="form-group mt-3">
-      <label for="cidade">Cidade</label>
-      <input type="text" id="cidade" class="form-control" placeholder="" style="border-color: #002060;">
-    </div>
-    <div class="form-group mt-3">
-      <label for="estadoCivil">Estado Civil</label>
-      <input type="text" id="estadoCivil" class="form-control" placeholder="" style="border-color: #002060;">
+      <label for="ceffito">Número da CREFITO *</label>
+      <input type="text" id="ceffito" class="form-control" style="border-color: #002060;" [(ngModel)]="formData.ceffito"
+        required name="ceffito" />
     </div>
     <div class="form-group mt-3">
       <label for="cpf">CPF *</label>
       <input type="text" id="cpf" class="form-control" placeholder="000.000.000-00" style="border-color: #002060;"
-        required>
+        [(ngModel)]="formData.cpf" required name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
     </div>
 
-    <div class="text-center mt-1">
-      <button type="submit" class="cor-botoes btn-primary btn rounded-pill">Registrar-se</button>
+    <div class="text-center mt-4">
+      <button type="button" class="btn btn-primary rounded-pill" (click)="enviarFormulario()">
+        Registrar-se
+      </button>
     </div>
   </form>
 </div>

@@ -13,4 +13,8 @@ export class PacienteService {
   buscarPorCpf(cpf: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/pacientes/${cpf}`);
   }
+
+  atualizarPaciente(id: number, paciente: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, paciente);
+  }
 }
