@@ -7,7 +7,7 @@ import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-pagina-principal',
   standalone: true,
-  imports: [NavbarComponent, RouterLink, CommonModule, RouterLinkActive, RouterOutlet,],
+  imports: [RouterLink, CommonModule,],
   templateUrl: './pagina-principal.component.html',
   styleUrl: './pagina-principal.component.scss'
 })
