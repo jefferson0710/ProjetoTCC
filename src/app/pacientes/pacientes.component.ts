@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-pacientes',
   standalone: true,
-  imports: [NavbarComponent, CommonModule, RouterLink, RouterOutlet, RouterLinkActive, FormsModule],
+  imports: [CommonModule, FormsModule],
   providers: [PacienteService],
   templateUrl: './pacientes.component.html',
   styleUrl: './pacientes.component.scss',

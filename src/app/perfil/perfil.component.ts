@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [CommonModule, NavbarComponent],
+  imports: [CommonModule],
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.scss']
 })
@@ -35,9 +35,7 @@ export class PerfilComponent {
   altura: string = '';
   eav: string = '';
   dadosComplementares: string = '';
-
   constructor(private http: HttpClient) { }
-
   // Método para salvar o formulário
   salvarFormulario() {
     // Crie um objeto com os dados do formulário
@@ -66,7 +64,6 @@ export class PerfilComponent {
       eav: this.eav,
       dados_complementares: this.dadosComplementares // Alterado para que corresponda ao campo da API
     };
-
     // Enviar os dados para a API via POST
     this.http.post('http://127.0.0.1:3333/fichas', dadosFormulario)
       .subscribe(
