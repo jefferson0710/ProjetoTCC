@@ -24,7 +24,7 @@ export class CadastroUsuarioComponent {
     lembre_se: 'sempre' // Campo opcional, pode ser vazio
   };
 
-  private apiUrl = 'http://127.0.0.1:3333/users'; // URL da sua API
+  private apiUrl = ' http://localhost:3333/users'; // URL da sua API
 
   constructor(private http: HttpClient, private router: Router) { }
 
