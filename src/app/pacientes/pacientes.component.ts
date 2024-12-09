@@ -50,7 +50,7 @@ export class PacientesComponent {
     this.paciente = paciente
   }
   salvarModal() {
-    this.http.put(`http://localhost:3333/fichas/${this.paciente.id}`, this.paciente).subscribe({
+    this.http.put(`https://ultimavezpt2.onrender.com/fichas/${this.paciente.id}`, this.paciente).subscribe({
       next: (res) => {
         alert('Ficha de Anamnese atualizada com sucesso!');
         console.log('Formulário salvo com sucesso!', res);
