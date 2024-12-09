@@ -26,8 +26,8 @@ export class FichaService {
   }
 
   // Atualizar uma ficha específica
-  updateFicha(id: number, data: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, data)
+  updateFicha(paciente: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${paciente.id}`, paciente)
   }
 
   // Excluir uma ficha específica

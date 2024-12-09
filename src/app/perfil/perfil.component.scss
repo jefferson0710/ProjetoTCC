@@ -40,3 +40,15 @@ body {
 .form-control {
   border-radius: 5px;
 }
+
+.custom-blue {
+  background-color: #007bff;
+  /* Azul padrão do Bootstrap */
+  border-color: #007bff;
+}
+
+.custom-blue:hover {
+  background-color: #0056b3;
+  /* Tom mais escuro de azul ao passar o mouse */
+  border-color: #0056b3;
+}

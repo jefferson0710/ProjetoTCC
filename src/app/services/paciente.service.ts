@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PacienteService {
-  private apiUrl = 'http://localhost:3333/users';
+  private apiUrl = 'http://localhost:3333/fichas';
 
   constructor(private http: HttpClient) { }
 
   buscarPorCpf(cpf: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/pacientes/${cpf}`);
+    return this.http.get(`${this.apiUrl}/${cpf}`);
   }
 
   atualizarPaciente(id: number, paciente: any): Observable<any> {

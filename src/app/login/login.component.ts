@@ -1,10 +1,10 @@
 import { Component, input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { NgModel } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

@@ -7,11 +7,12 @@
         <div class="mb-3 d-flex justify-content-start align-items-center">
           <h3 for="email" class="email m-0">Email:</h3>
           <input type="email" id="email" class="form-control color-input ms-2" placeholder="seuEmail@gmail.com"
-            required>
+            [(ngModel)]="email" required name="email">
         </div>
         <div class="mb-3 d-flex justify-content-start align-items-center">
           <h3 for="senha" class="senha m-0">Senha:</h3>
-          <input type="password" id="senha" class="form-control color-input ms-2" placeholder="************" required>
+          <input [(ngModel)]="password" type="password" id="senha" class="form-control color-input ms-2"
+            placeholder="************" required name="password">
         </div>
         <div class="d-flex justify-content-between mb-3">
           <div class="form-check">
@@ -28,7 +29,8 @@
             Cadastrar
           </button>
 
-          <button type="submit" class="btn btn-primary cor-botoes rounded-pill" style="display: inline-block;">
+          <button type="submit" class="btn btn-primary cor-botoes rounded-pill" style="display: inline-block;"
+            (click)="onLogin()">
             ENTRAR
           </button>
         </div>

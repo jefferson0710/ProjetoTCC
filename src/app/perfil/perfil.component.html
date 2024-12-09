@@ -6,41 +6,47 @@
     <div class="form-group row">
       <div class="col-md-6">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
+        <input type="text" class="form-control" id="nome" placeholder="Digite o nome" [(ngModel)]="formData.name"
+          required name="nome">
       </div>
       <div class="col-md-3">
         <label for="idade">Idade</label>
-        <input type="number" class="form-control" id="idade" placeholder="Idade">
+        <input type="number" class="form-control" id="idade" placeholder="Idade" [(ngModel)]="formData.idade" required
+          name="idade">
       </div>
       <div class="col-md-3">
         <label for="cns">CNS</label>
-        <input type="text" class="form-control" id="cns" placeholder="CNS">
+        <input type="text" class="form-control" id="cns" placeholder="CNS" [(ngModel)]="formData.cns" required
+          name="cns">
       </div>
     </div>
 
     <div class="form-group row">
       <div class="col-md-6">
         <label for="endereco">Endereço</label>
-        <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+        <input type="text" class="form-control" id="endereco" placeholder="Endereço" [(ngModel)]="formData.endereco"
+          required name="endereco">
       </div>
       <div class="col-md-3">
         <label for="sexo">Sexo</label>
-        <select id="sexo" class="form-control">
+        <select id="sexo" class="form-control" [(ngModel)]="formData.sexo" name="sexo">
           <option value="" selected>Selecione</option>
           <option value="masculino">Masculino</option>
           <option value="feminino">Feminino</option>
         </select>
       </div>
       <div class="col-md-3">
-        <label for="fone">Telefone</label>
-        <input type="tel" class="form-control" id="fone" placeholder="Telefone">
+        <label for="telefone">Telefone</label>
+        <input type="tel" class="form-control" id="telefone" placeholder="Telefone" [(ngModel)]="formData.telefone"
+          required name="telefone">
       </div>
     </div>
 
     <div class="form-group row">
       <div class="col-md-6">
         <label for="profissao">Profissão</label>
-        <input type="text" class="form-control" id="profissao" placeholder="Profissão">
+        <input type="text" class="form-control" id="profissao" placeholder="Profissão" [(ngModel)]="formData.profissao"
+          required name="profissao">
       </div>
     </div>
 
@@ -48,53 +54,68 @@
     <div class="form-group row">
       <div class="col-md-6">
         <label for="diagnostico">Diagnóstico Clínico</label>
-        <input type="text" class="form-control" id="diagnostico" placeholder="Diagnóstico Clínico">
+        <input type="text" class="form-control" id="diagnostico" placeholder="Diagnóstico Clínico"
+          [(ngModel)]="formData.diagnostico" required name="diagnostico">
       </div>
       <div class="col-md-6">
-        <label for="cid">CID</label>
-        <input type="text" class="form-control" id="cid" placeholder="CID">
+        <label for="cid">CPF</label>
+        <input type="text" class="form-control" id="cpf" placeholder="CPF" [(ngModel)]="formData.cpf" required
+          name="cpf">
       </div>
     </div>
 
     <div class="form-group">
       <label for="queixa">Queixa Principal</label>
-      <textarea class="form-control" id="queixa" rows="3" placeholder="Descreva a queixa principal"></textarea>
+      <textarea class="form-control" id="queixa" rows="3" placeholder="Descreva a queixa principal"
+        [(ngModel)]="formData.queixa_principal" required name="queixa_principal"></textarea>
     </div>
-
+    <div class="form-group">
+      <label for="queixa">Histórico Familiar</label>
+      <textarea class="form-control" id="queixa" rows="3" placeholder="Histórico da Familia"
+        [(ngModel)]="formData.historico_familiar" required name="historico_familiar"></textarea>
+    </div>
     <div class="form-group">
       <label for="hma">HMA / HPP / HF</label>
-      <textarea class="form-control" id="hma" rows="3" placeholder="Histórico da Moléstia Atual ou Familiar"></textarea>
+      <textarea class="form-control" id="hma" rows="3" placeholder="Histórico da Moléstia Atual ou Familiar"
+        [(ngModel)]="formData.hma"></textarea>
     </div>
 
     <div class="form-group row">
       <div class="col-md-3">
         <label>Pratica atividade física?</label>
         <div>
-          <label class="mr-2"><input type="radio" name="atividade_fisica" value="nao"> NÃO</label>
-          <label><input type="radio" name="atividade_fisica" value="sim"> SIM</label>
+          <label class="mr-2"><input type="radio" name="atividade_fisica" [(ngModel)]="formData.atividade_fisica"
+              [value]="false"> NÃO</label>
+          <label><input type="radio" name="atividade_fisica" [(ngModel)]="formData.atividade_fisica" [value]="true">
+            SIM</label>
         </div>
       </div>
       <div class="col-md-3">
         <label>Fuma?</label>
         <div>
-          <label class="mr-2"><input type="radio" name="fuma" value="nao"> NÃO</label>
-          <label><input type="radio" name="fuma" value="sim"> SIM</label>
+          <label class="mr-2"><input type="radio" name="fuma" [(ngModel)]="formData.fuma" [value]="false"> NÃO</label>
+          <label><input type="radio" name="fuma" [(ngModel)]="formData.fuma" [value]="true"> SIM</label>
         </div>
-        <input type="text" class="form-control mt-1" id="cigarros_dia" placeholder="Cigarros/dia">
+        <input type="text" class="form-control mt-1" id="cigarros_dia" placeholder="Cigarros/dia"
+          [(ngModel)]="formData.vezes">
       </div>
       <div class="col-md-3">
         <label>Bebidas Alcoólicas?</label>
         <div>
-          <label class="mr-2"><input type="radio" name="bebidas" value="nao"> NÃO</label>
-          <label><input type="radio" name="bebidas" value="sim"> SIM</label>
+          <label class="mr-2"><input type="radio" name="alcool" [(ngModel)]="formData.alcool" [value]="false">
+            NÃO</label>
+          <label><input type="radio" name="alcool" [(ngModel)]="formData.alcool" [value]="true"> SIM</label>
         </div>
-        <input type="text" class="form-control mt-1" id="vezes_semana" placeholder="Vezes por semana">
+
       </div>
       <div class="col-md-3">
         <label>Impede tarefas?</label>
         <div>
-          <label class="mr-2"><input type="radio" name="impede_tarefa" value="nao"> NÃO</label>
-          <label><input type="radio" name="impede_tarefa" value="sim"> SIM</label>
+          <label class="mr-2"><input type="radio" name="impede_tarefa" [(ngModel)]="formData.impede_tarefa"
+              [value]="false">
+            NÃO</label>
+          <label><input type="radio" name="impede_tarefa" [(ngModel)]="formData.impede_tarefa" [value]="true">
+            SIM</label>
         </div>
       </div>
     </div>
@@ -102,30 +123,28 @@
     <div class="form-group row">
       <div class="col-md-3">
         <label for="pa">PA</label>
-        <input type="text" class="form-control" id="pa" placeholder="PA (Ex: 120/80)">
+        <input type="text" class="form-control" id="pa" placeholder="PA (Ex: 120/80)" [(ngModel)]="formData.pa">
       </div>
-      <div class="col-md-3">
-        <label for="peso">Peso</label>
-        <input type="text" class="form-control" id="peso" placeholder="Peso (Kg)">
-      </div>
+
       <div class="col-md-3">
         <label for="altura">Altura</label>
-        <input type="text" class="form-control" id="altura" placeholder="Altura (m)">
+        <input type="text" class="form-control" id="altura" placeholder="Altura (m)" [(ngModel)]="formData.altura">
       </div>
       <div class="col-md-3">
         <label for="eav">EAV</label>
-        <input type="text" class="form-control" id="eav" placeholder="Escala de Dor">
+        <input type="text" class="form-control" id="eav" placeholder="Escala de Dor" [(ngModel)]="formData.eav">
       </div>
     </div>
 
     <h5 class="sub-header text-primary">DADOS COMPLEMENTARES</h5>
     <div class="form-group">
-      <textarea class="form-control" id="dados_complementares" rows="3"
-        placeholder="Informações complementares"></textarea>
+      <textarea class="form-control" id="dados_complementares" rows="3" placeholder="Informações complementares"
+        [(ngModel)]="formData.dados_complementares"></textarea>
     </div>
 
     <div class="text-center mt-4">
-      <button type="button" class="btn btn-success btn-lg" (click)="salvarFormulario()">Salvar</button>
+      <button type="button" class="btn custom-blue btn-lg" (click)="salvarFormulario()"><strong>Salvar</strong></button>
+
     </div>
   </div>
 </div>
