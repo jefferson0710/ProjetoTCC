@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/internal/Observable';
 export class UserService {
 
   // A URL da sua API. Substitua pelo endpoint correto da sua API
-  private apiUrl = 'http://localhost:3333/users';  // Exemplo de URL
+  private apiUrl = 'https://ultimavezpt2-2.onrender.com/users';  // Exemplo de URL
 
   constructor(private http: HttpClient) { }
 

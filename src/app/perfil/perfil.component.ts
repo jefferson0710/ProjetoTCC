@@ -38,7 +38,7 @@ export class PerfilComponent {
   };
 
   // URL da API
-  private apiUrl = 'http://localhost:3333/fichas';
+  private apiUrl = 'https://ultimavezpt2-2.onrender.com/fichas';
 
   constructor(private http: HttpClient, private router: Router, ngbModalService: NgbModal) { }
 
@@ -47,7 +47,7 @@ export class PerfilComponent {
       ...this.formData,
       sexo: this.formData.sexo === 'masculino' ? 0 : this.formData.sexo === 'feminino' ? 1 : undefined,
     };
-    this.http.post('http://localhost:3333/fichas', payload).subscribe({
+    this.http.post('https://ultimavezpt2-2.onrender.com/fichas', payload).subscribe({
       next: (res) => {
         alert('Formulário salvo com sucesso!');
         console.log('Formulário salvo com sucesso!', res);

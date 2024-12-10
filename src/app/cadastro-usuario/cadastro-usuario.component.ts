@@ -24,7 +24,7 @@ export class CadastroUsuarioComponent {
     lembre_se: 'sempre' // Campo opcional, pode ser vazio
   };
 
-  private apiUrl = 'https://ultimavezpt2.onrender.com/users'; // URL da sua API
+  private apiUrl = 'https://ultimavezpt2-2.onrender.com/users'; // URL da sua API
 
   constructor(private http: HttpClient, private router: Router) { }
 

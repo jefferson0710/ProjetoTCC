@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PacienteService {
-  private apiUrl = 'http://localhost:3333/fichas';
+  private apiUrl = 'https://ultimavezpt2-2.onrender.com/fichas';
 
   constructor(private http: HttpClient) { }
 
